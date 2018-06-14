@@ -1,0 +1,25 @@
+header {
+  .top-bar {
+    background-color: #363d4a;
+    color: #363d4a;
+
+    ul {
+      background-color: #363d4a;
+    }
+
+    a {
+      color: #afb7c3;
+      font-size: .9rem;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
+  }
+
+  .logo {
+    height: 38px;
+  }
+
+}

@@ -1,17 +1,39 @@
 <app-header></app-header>
-<div class="grid-x">
-  <div class="cell">full width cell</div>
-  <div class="cell">full width cell</div>
-</div>
-<div class="grid-x">
-  <div class="cell small-6">6 cells</div>
-  <div class="cell small-6">6 cells</div>
-</div>
-<div class="grid-x">
-  <div class="cell medium-6 large-4">12/6/4 cells</div>
-  <div class="cell medium-6 large-8">12/6/8 cells</div>
-</div>
-<a [routerLink]="['/profile']">
-  go to profile <i class="fab fa-500px"></i>
-</a>
+  <div class="content-wrapper">
+    <div class="content-header box">
+      <div class="grid-x">
+        <div class="cell medium-6">
+          <h4 class="margin-0">
+          Dashboard
+          <small>Control panel</small>
+         </h4>
+        </div>
+        <div class="cell medium-6 flex align-middle text-right">
+          <nav role="navigation">
+            <ul class="breadcrumbs margin-0">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Features</a></li>
+              <li class="disabled">Gene Splicing</li>
+              <li>
+                <span class="show-for-sr">Current: </span> Cloning
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="grid-container margin-top-2">
+      <div class="grid-x box">
+        <div class="cell">full width cell</div>
+      </div>
+      <div class="grid-x">
+        <div class="cell small-6">6 cells</div>
+        <div class="cell small-6">6 cells</div>
+      </div>
+      <div class="grid-x">
+        <div class="cell medium-6 large-4">12/6/4 cells</div>
+        <div class="cell medium-6 large-8">12/6/8 cells</div>
+      </div>
+    </div>
+  </div>
 <app-footer></app-footer>

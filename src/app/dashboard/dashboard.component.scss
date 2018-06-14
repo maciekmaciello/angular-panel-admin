@@ -1,0 +1,34 @@
+.content-wrapper {
+
+  .box {
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+  }
+
+  &::before {
+    background: #363d4a;
+    top: 50px;
+    left: 0;
+    content: '';
+    height: 50px;
+    width: 100%;
+    position: absolute;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .content-header {
+    margin: 0 20px;
+    position: relative;
+  }
+
+  .grid-container {
+    max-width: 77rem;
+  }
+
+
+}
