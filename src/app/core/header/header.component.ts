@@ -7,11 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  menu: string[];
+  menu: { name: string, link: string }[];
 
   constructor() {
     this.menu = [
-      'Users', 'Affiliates', 'Turnover', 'List Mode', 'Statement', 'Promo Code'];
+      { name: 'Users', link: '/users' },
+      { name: 'Affiliates', link: '/affiliates' },
+      { name: 'Turnover', link: '/turnover' },
+      { name: 'List', link: '/list' },
+      { name: 'Statement', link: '/statement' },
+      { name: 'Promo', link: '/promo' },
+    ];
   }
 
   ngOnInit() {

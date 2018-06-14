@@ -9,6 +9,10 @@ import { ProfileComponent } from '../profile/profile.component';
 import { DashboardComponent } from '../dashboard/dashboard.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { AffiliatesComponent } from '../affiliates/affiliates.component';
+import { TurnoverComponent } from '../turnover/turnover.component';
+import { AsideLeftComponent } from './aside-left/aside-left.component';
+
 
 @NgModule({
   imports: [
@@ -21,8 +25,11 @@ import { FooterComponent } from './footer/footer.component';
     FooterComponent,
     HeaderComponent,
     DashboardComponent,
-    ProfileComponent
-  ],
+    ProfileComponent,
+    AffiliatesComponent,
+    TurnoverComponent,
+    AsideLeftComponent
+],
   exports: [
     RouterModule,
   ]

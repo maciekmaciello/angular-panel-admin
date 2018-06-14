@@ -1,10 +1,10 @@
 <app-header></app-header>
-  <div class="content-wrapper">
+  <div class="content-wrapper dashboard">
     <div class="content-header box">
       <div class="grid-x">
         <div class="cell medium-6">
           <h4 class="margin-0">
-          Dashboard
+          {{title}}
           <small>Control panel</small>
          </h4>
         </div>
@@ -22,17 +22,85 @@
         </div>
       </div>
     </div>
-    <div class="grid-container margin-top-2">
-      <div class="grid-x box">
-        <div class="cell">full width cell</div>
-      </div>
+    <div class="grid-container margin-top-1">
       <div class="grid-x">
-        <div class="cell small-6">6 cells</div>
-        <div class="cell small-6">6 cells</div>
+        <div class="cell small-12 medium-6 large-4">
+          <div class="stat">
+            <div class="icon">
+              $
+            </div>
+            <div class="content">
+              <div class="name">Visits Today</div>
+              <div class="value">2 125 854</div>
+            </div>
+          </div>
+        </div>
+        <div class="cell small-12 medium-6 large-4">
+          <div class="stat">
+            <div class="icon">
+              $
+            </div>
+            <div class="content">
+              <div class="name">Orders</div>
+              <div class="value">$421 458.45</div>
+            </div>
+          </div>
+        </div>
+        <div class="cell small-12 medium-6 large-4">
+          <div class="stat">
+            <div class="icon">
+              $
+            </div>
+            <div class="content">
+              <div class="name">Total Users</div>
+              <div class="value">3 122</div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="grid-x">
-        <div class="cell medium-6 large-4">12/6/4 cells</div>
-        <div class="cell medium-6 large-8">12/6/8 cells</div>
+      <div class="grid-x margin-top-2">
+        <div class="cell small-6">
+          <div class="content-box box">
+            <div class="box-header padding-0">
+              <h6 class="box-title margin-0">
+                Affiliates To Be Verified
+              </h6>
+            </div>
+            <div class="box-content">
+              <table class="stack">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1.</td>
+                    <td>Maciek</td>
+                    <td>Maciek</td>
+                    <td>mg@idesign.center</td>
+                  </tr>
+                  <tr>
+                    <td>2.</td>
+                    <td>Michal</td>
+                    <td>Michal</td>
+                    <td>mm@idesign.center</td>
+                  </tr>
+                  <tr>
+                    <td>3.</td>
+                    <td>Pioter</td>
+                    <td>Picia</td>
+                    <td>pk@idesign.center</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="cell small-6 box">6 cells</div>
       </div>
     </div>
   </div>

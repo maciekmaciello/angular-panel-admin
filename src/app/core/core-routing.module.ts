@@ -4,6 +4,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from '../dashboard/dashboard.component';
 import { ProfileComponent } from '../profile/profile.component';
+import { AffiliatesComponent } from '../affiliates/affiliates.component';
+import { TurnoverComponent } from '../turnover/turnover.component';
 
 const routes: Routes = [
   {
@@ -16,8 +18,16 @@ const routes: Routes = [
     component: DashboardComponent
   },
   {
-    path: 'profile',
+    path: 'users',
     component: ProfileComponent
+  },
+  {
+    path: 'affiliates',
+    component: AffiliatesComponent
+  },
+  {
+    path: 'turnover',
+    component: TurnoverComponent
   },
   {
     path: 'login',
