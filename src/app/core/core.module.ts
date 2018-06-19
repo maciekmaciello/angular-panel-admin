@@ -16,6 +16,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AffiliatesComponent } from '../affiliates/affiliates.component';
 import { TurnoverComponent } from '../turnover/turnover.component';
 import { AsideLeftComponent } from './aside-left/aside-left.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -24,7 +25,9 @@ import { AsideLeftComponent } from './aside-left/aside-left.component';
     CoreRoutingModule,
     MatButtonModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [
     NotFoundComponent,
@@ -38,7 +41,7 @@ import { AsideLeftComponent } from './aside-left/aside-left.component';
     AsideLeftComponent
   ],
   exports: [
-    RouterModule,
+    RouterModule
   ]
 })
 export class CoreModule { }

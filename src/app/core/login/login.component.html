@@ -6,21 +6,34 @@
           <div class="grid-x grid-margin-x">
             <div class="cell small-7 medium-7 left-side margin-0 margin-vertical-2">
               <div class="head-content padding-3">
-                <h4>Hello there,</h4>
+                <h3>Hello there,</h3>
                 <h5>welcome to TestApp.</h5>
               </div>
               <div class="form-content padding-horizontal-2 padding-bottom-3">
-                <form>
+                 <form>
                   <div class="grid-container">
                     <div class="grid-x grid-padding-x">
                       <div class="cell padding-0">
                         <mat-form-field class="width-100">
-                          <input matInput placeholder="Email">
+                          <input matInput [formControl]="emailFormControl"
+                          placeholder="Email" [errorStateMatcher]="matcher">
+                          <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                            Please enter a valid email address
+                          </mat-error>
+                          <mat-error *ngIf="emailFormControl.hasError('required')">
+                            Email is <strong>required</strong>
+                          </mat-error>
                         </mat-form-field>
                       </div>
-                      <div class="cell padding-0">
+                      <div class="cell padding-0 padding-bottom-2">
                         <mat-form-field class="width-100">
-                          <input matInput placeholder="Password">
+                          <input matInput [errorStateMatcher]="matcher" [formControl]="passwordFormControl" placeholder="Password">
+                          <mat-error *ngIf="passwordFormControl.hasError('required')">
+                            Password is <strong>required</strong>
+                          </mat-error>
+                          <mat-error *ngIf="passwordFormControl.hasError('minlength')">
+                            Password is too <strong>short</strong>
+                          </mat-error>
                         </mat-form-field>
                       </div>
                       <div class="cell medium-6 padding-0">
@@ -63,7 +76,7 @@
               <div class="text-content padding-horizontal-1">
                 <span>Have an idea to share with us? Or want to start a conversation with us?</span>
                 <p class="text-right">
-                  <button mat-button>Email US</button>
+                  <button class="text-underline" mat-button>Email US</button>
                 </p>
               </div>
             </div>
