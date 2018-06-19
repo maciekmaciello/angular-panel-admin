@@ -11,6 +11,11 @@ header {
       color: #afb7c3;
       font-size: .9rem;
 
+      &.active-link {
+        border-bottom: 1px solid #236f99;
+        color: #f4f7f6;
+      }
+
       &:hover {
         color: #fff;
       }

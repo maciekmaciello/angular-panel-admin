@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroupDirective, NgForm, Validators, FormControl } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
+import { Router } from '@angular/router';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
@@ -26,11 +27,17 @@ export class LoginComponent implements OnInit {
 
   matcher = new MyErrorStateMatcher();
 
-  constructor() {
+  constructor(private router: Router) {
   }
 
 
   ngOnInit() {
+  }
+
+  signIn() {
+    if (!this.emailFormControl.errors && !this.passwordFormControl.errors) {
+      return this.router.navigate(['']);
+    }
   }
 
 }

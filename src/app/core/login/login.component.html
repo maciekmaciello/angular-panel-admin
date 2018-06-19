@@ -26,21 +26,16 @@
                         </mat-form-field>
                       </div>
                       <div class="cell padding-0 padding-bottom-2">
-                        <mat-form-field class="width-100">
-                          <input matInput [errorStateMatcher]="matcher" [formControl]="passwordFormControl" placeholder="Password">
+                        <mat-form-field hintLabel="Min 8 characters" class="width-100">
+                          <input matInput #password [errorStateMatcher]="matcher" [formControl]="passwordFormControl" placeholder="Password">
+                          <mat-hint align="end">{{password.value?.length || 0}}/8</mat-hint>
                           <mat-error *ngIf="passwordFormControl.hasError('required')">
                             Password is <strong>required</strong>
                           </mat-error>
-                          <mat-error *ngIf="passwordFormControl.hasError('minlength')">
-                            Password is too <strong>short</strong>
-                          </mat-error>
                         </mat-form-field>
                       </div>
-                      <div class="cell medium-6 padding-0">
-                        <a>Forgot password?</a>
-                      </div>
-                      <div class="cell medium-6 padding-0">
-                        <button mat-raised-button color="primary">Sign In!</button>
+                      <div class="cell text-right padding-0">
+                        <button [disabled]="false" (click)="signIn()" mat-raised-button color="primary">Sign In!</button>
                       </div>
                     </div>
                   </div>
