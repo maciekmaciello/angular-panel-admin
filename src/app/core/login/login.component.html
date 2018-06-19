@@ -1,3 +1,76 @@
-<p>
-  login works!
-</p>
+<section class="login-page">
+  <div class="grid-container height-100">
+    <div class="grid-x grid-padding-x height-100">
+      <div class="cell panel-login">
+        <div class="grid-container width-75">
+          <div class="grid-x grid-margin-x">
+            <div class="cell small-7 medium-7 left-side margin-0 margin-vertical-2">
+              <div class="head-content padding-3">
+                <h4>Hello there,</h4>
+                <h5>welcome to TestApp.</h5>
+              </div>
+              <div class="form-content padding-horizontal-2 padding-bottom-3">
+                <form>
+                  <div class="grid-container">
+                    <div class="grid-x grid-padding-x">
+                      <div class="cell padding-0">
+                        <mat-form-field class="width-100">
+                          <input matInput placeholder="Email">
+                        </mat-form-field>
+                      </div>
+                      <div class="cell padding-0">
+                        <mat-form-field class="width-100">
+                          <input matInput placeholder="Password">
+                        </mat-form-field>
+                      </div>
+                      <div class="cell medium-6 padding-0">
+                        <a>Forgot password?</a>
+                      </div>
+                      <div class="cell medium-6 padding-0">
+                        <button mat-raised-button color="primary">Sign In!</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="cell small-5 medium-5 right-side margin-0 padding-1">
+              <div class="logo-content">
+                <a class="padding-0" [routerLink]="['/']">
+                  <img class="logo" [src]="'assets/img/logo.png'" alt="Logo">
+                </a>
+              </div>
+              <div class="img-content padding-vertical-3">
+                <svg class="anim-char" enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 512 390" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                  <g class="char-lines" fill="#D7DEED">
+                    <rect class="char-line1" x="88.276" y="256.62" width="17.655" height="44.138"></rect>
+                    <rect class="char-line2" x="167.72" y="221.31" width="17.655" height="79.448"></rect>
+                    <rect class="char-line3" x="247.17" y="185" width="17.655" height="114.76"></rect>
+                    <rect class="char-line4" x="406.07" y="97.72" width="17.655" height="203.03"></rect>
+                    <rect class="char-line5" x="326.62" y="141.86" width="17.655" height="158.9"></rect>
+                  </g>
+                  <path class="char-path" d="m 97.108,265.451 c -3.382,0 -6.61,-1.954 -8.072,-5.245 -1.98,-4.455 0.026,-9.672 4.482,-11.652 173.23733,-87.76596 160.61215,-79.8058 314.545,-165.248 3.087,-3.775 8.648,-4.331 12.423,-1.242 3.773,3.087 4.329,8.649 1.242,12.422 -154.8711,89.45834 -153.94963,85.65876 -321.04,170.202 -1.165,0.518 -2.382,0.763 -3.58,0.763 z" fill="#8F96AC"></path>
+                  <path d="m494.34 362.55h-476.69c-9.751 0-17.655-7.904-17.655-17.655v-8.828c0-4.875 3.953-8.828 8.828-8.828h494.34c4.875 0 8.828 3.953 8.828 8.828v8.828c-1e-3 9.751-7.905 17.655-17.656 17.655z" fill="#959CB3"></path>
+                  <path d="m285.86 344.9h-59.709c-3.343 0-6.4-1.889-7.895-4.879l-6.389-12.776h88.276l-6.388 12.776c-1.495 2.989-4.552 4.879-7.895 4.879z" fill="#707487"></path>
+                  <path d="m467.86 9.448h-423.72c-14.626 0-26.483 11.857-26.483 26.483v291.31h476.69v-291.31c0-14.626-11.857-26.483-26.483-26.483zm0 282.48c0 4.875-3.953 8.828-8.828 8.828h-406.07c-4.875 0-8.828-3.953-8.828-8.828v-247.17c0-4.875 3.953-8.828 8.828-8.828h406.07c4.875 0 8.828 3.953 8.828 8.828v247.17z" fill="#AFB9D2"></path>
+                  <circle class="circle4" cx="335.45" cy="133.03" r="17.655" fill="#FFD782"></circle>
+                  <circle class="circle2" cx="176.55" cy="218" r="17.655" fill="#FF6464"></circle>
+                  <circle class="circle5" cx="414.9" cy="88.9" r="17.655" fill="#9BE6D2"></circle>
+                  <circle class="circle3" cx="256" cy="177" r="17.655" fill="#C3E678"></circle>
+                  <circle class="circle1" cx="97.103" cy="256.62" r="17.655" fill="#267aca"></circle>
+                </svg>
+              </div>
+              <div class="text-content padding-horizontal-1">
+                <span>Have an idea to share with us? Or want to start a conversation with us?</span>
+                <p class="text-right">
+                  <button mat-button>Email US</button>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>
