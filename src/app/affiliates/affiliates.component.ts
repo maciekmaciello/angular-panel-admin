@@ -7,11 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AffiliatesComponent implements OnInit {
   title: string;
-  menuAff: string[];
+  menuAff: any[];
   constructor() {
     this.title = 'Affiliates';
-    this.menuAff = ['Affiliates', 'Marketing Materials', 'Packages',
-      'Withdrawn', 'Affiliates to be verified']
+    this.menuAff = [
+      { name: 'Affiliates', icon: 'fas fa-handshake  fa-sm' },
+      { name: 'Marketing Materials', icon: 'fas fa-briefcase fa-sm' },
+      { name: 'Packages', icon: 'fas fa-box fa-sm' },
+      { name: 'Withdrawn', icon: 'far fa-money-bill-alt fa-sm' },
+      { name: 'Affiliates to be verified', icon: 'fas fa-poo fa-sm' },
+
+    ];
   }
 
   ngOnInit() {

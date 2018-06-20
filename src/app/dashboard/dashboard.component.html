@@ -1,27 +1,6 @@
 <app-header></app-header>
   <div class="content-wrapper dashboard">
-    <div class="content-header box">
-      <div class="grid-x">
-        <div class="cell medium-6">
-          <h4 class="margin-0">
-          {{title}}
-          <small>Control panel</small>
-         </h4>
-        </div>
-        <div class="cell medium-6 flex align-middle text-right">
-          <nav role="navigation">
-            <ul class="breadcrumbs margin-0">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Features</a></li>
-              <li class="disabled">Gene Splicing</li>
-              <li>
-                <span class="show-for-sr">Current: </span> Cloning
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </div>
+    <app-nav-breadcrumbs [title]="title"></app-nav-breadcrumbs>
     <div class="grid-container margin-top-1">
       <div class="grid-x">
         <div class="cell small-12 medium-6 large-4">

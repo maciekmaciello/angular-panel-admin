@@ -2,7 +2,10 @@
   <nav id="menu" class="nav-main">
     <ul class="nav nav-main vertical menu icons">
       <li *ngFor="let item of menu">
-        <a>{{ item }}</a>
+        <a class="item-a">
+          <i class="{{ item.icon }}"></i>
+          <span class="padding-left-1">{{ item.name }}</span>
+        </a>
       </li>
     </ul>
   </nav>

@@ -17,6 +17,7 @@ import { AffiliatesComponent } from '../affiliates/affiliates.component';
 import { TurnoverComponent } from '../turnover/turnover.component';
 import { AsideLeftComponent } from './aside-left/aside-left.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NavBreadcrumbsComponent } from './nav-breadcrumbs/nav-breadcrumbs.component';
 
 
 @NgModule({
@@ -38,8 +39,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ProfileComponent,
     AffiliatesComponent,
     TurnoverComponent,
-    AsideLeftComponent
-  ],
+    AsideLeftComponent,
+    NavBreadcrumbsComponent
+],
   exports: [
     RouterModule
   ]
