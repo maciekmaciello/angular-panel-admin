@@ -6,6 +6,8 @@ import { CoreRoutingModule } from './core-routing.module';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableModule } from '@angular/material/table';
 
 import { NotFoundComponent } from './not-found/not-found.component';
 import { LoginComponent } from './login/login.component';
@@ -22,6 +24,11 @@ import { NavBreadcrumbsComponent } from './nav-breadcrumbs/nav-breadcrumbs.compo
 import { FooterComponent } from './footer/footer.component';
 import { AsideLeftComponent } from './aside-left/aside-left.component';
 import { AffiliatesComponent } from '../affiliates/affiliates.component';
+import { MaterialsComponent } from '../affiliates/materials/materials.component';
+import { HomeComponent } from '../affiliates/home/home.component';
+import { PackagesComponent } from '../affiliates/packages/packages.component';
+import { VerifiedComponent } from '../affiliates/verified/verified.component';
+import { WithdrawnComponent } from '../affiliates/withdrawn/withdrawn.component';
 
 
 @NgModule({
@@ -32,15 +39,22 @@ import { AffiliatesComponent } from '../affiliates/affiliates.component';
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatPaginatorModule,
+    MatTableModule
   ],
   declarations: [
     NotFoundComponent,
     LoginComponent,
+    HomeComponent,
+    PackagesComponent,
+    VerifiedComponent,
+    WithdrawnComponent,
     AffiliatesComponent,
     StatementComponent,
     DashboardComponent,
     ProfileComponent,
+    MaterialsComponent,
     TurnoverComponent,
     ListComponent,
     PromoComponent,

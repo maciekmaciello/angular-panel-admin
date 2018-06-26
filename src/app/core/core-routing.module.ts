@@ -9,6 +9,11 @@ import { ListComponent } from '../list/list.component';
 import { PromoComponent } from '../promo/promo.component';
 import { StatementComponent } from '../statement/statement.component';
 import { AffiliatesComponent } from '../affiliates/affiliates.component';
+import { MaterialsComponent } from '../affiliates/materials/materials.component';
+import { HomeComponent } from '../affiliates/home/home.component';
+import { PackagesComponent } from '../affiliates/packages/packages.component';
+import { WithdrawnComponent } from '../affiliates/withdrawn/withdrawn.component';
+import { VerifiedComponent } from '../affiliates/verified/verified.component';
 
 const routes: Routes = [
   {
@@ -26,7 +31,29 @@ const routes: Routes = [
   },
   {
     path: 'affiliates',
-    component: AffiliatesComponent
+    component: AffiliatesComponent,
+    children: [
+      {
+        path: '',
+        component: HomeComponent
+      },
+      {
+        path: 'materials',
+        component: MaterialsComponent
+      },
+      {
+        path: 'packages',
+        component: PackagesComponent
+      },
+      {
+        path: 'withdrawn',
+        component: WithdrawnComponent
+      },
+      {
+        path: 'verified',
+        component: VerifiedComponent
+      }
+    ]
   },
   {
     path: 'turnover',

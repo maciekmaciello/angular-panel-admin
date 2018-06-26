@@ -2,7 +2,7 @@
   <nav id="menu" class="nav-main">
     <ul class="nav nav-main vertical menu icons">
       <li *ngFor="let item of menu">
-        <a class="item-a">
+        <a [routerLink]="[item.url]" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="item-a">
           <i class="{{ item.icon }}"></i>
           <span class="padding-left-1">{{ item.name }}</span>
         </a>

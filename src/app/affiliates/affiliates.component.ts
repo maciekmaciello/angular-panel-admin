@@ -11,11 +11,11 @@ export class AffiliatesComponent implements OnInit {
   constructor() {
     this.title = 'Affiliates';
     this.menuAff = [
-      { name: 'Affiliates', icon: 'fas fa-handshake  fa-sm' },
-      { name: 'Marketing Materials', icon: 'fas fa-briefcase fa-sm' },
-      { name: 'Packages', icon: 'fas fa-box fa-sm' },
-      { name: 'Withdrawn', icon: 'far fa-money-bill-alt fa-sm' },
-      { name: 'Affiliates to be verified', icon: 'fas fa-poo fa-sm' },
+      { name: 'Affiliates', icon: 'fas fa-handshake  fa-sm', url: '/affiliates' },
+      { name: 'Marketing Materials', icon: 'fas fa-briefcase fa-sm', url: 'materials/' },
+      { name: 'Packages', icon: 'fas fa-box fa-sm', url: 'packages/' },
+      { name: 'Withdrawn', icon: 'far fa-money-bill-alt fa-sm', url: 'withdrawn/' },
+      { name: 'Affiliates to be verified', icon: 'fas fa-poo fa-sm', url: 'verified/' },
 
     ];
   }

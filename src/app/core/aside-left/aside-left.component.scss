@@ -4,10 +4,19 @@
   .nav-main {
 
     li {
+      padding-right: 30px;
+
       a {
         align-items: center;
         color: #5d5d5d;
         padding: .4rem 0;
+        border-bottom: 1px dotted transparent;
+
+        &.active {
+          color: #1793d1;
+          border-color: #cec8c8;
+        }
+
       }
     }
   }
