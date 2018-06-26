@@ -4,8 +4,11 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from '../dashboard/dashboard.component';
 import { ProfileComponent } from '../profile/profile.component';
-import { AffiliatesComponent } from '../affiliates/affiliates.component';
 import { TurnoverComponent } from '../turnover/turnover.component';
+import { ListComponent } from '../list/list.component';
+import { PromoComponent } from '../promo/promo.component';
+import { StatementComponent } from '../statement/statement.component';
+import { AffiliatesComponent } from '../affiliates/affiliates.component';
 
 const routes: Routes = [
   {
@@ -28,6 +31,18 @@ const routes: Routes = [
   {
     path: 'turnover',
     component: TurnoverComponent
+  },
+  {
+    path: 'list',
+    component: ListComponent
+  },
+  {
+    path: 'statement',
+    component: StatementComponent
+  },
+  {
+    path: 'promo',
+    component: PromoComponent
   },
   {
     path: 'login',

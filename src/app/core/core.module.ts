@@ -11,13 +11,17 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from '../profile/profile.component';
 import { DashboardComponent } from '../dashboard/dashboard.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { AffiliatesComponent } from '../affiliates/affiliates.component';
 import { TurnoverComponent } from '../turnover/turnover.component';
-import { AsideLeftComponent } from './aside-left/aside-left.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import { StatementComponent } from '../statement/statement.component';
+import { ListComponent } from '../list/list.component';
+import { PromoComponent } from '../promo/promo.component';
+import { HeaderComponent } from './header/header.component';
 import { NavBreadcrumbsComponent } from './nav-breadcrumbs/nav-breadcrumbs.component';
+import { FooterComponent } from './footer/footer.component';
+import { AsideLeftComponent } from './aside-left/aside-left.component';
+import { AffiliatesComponent } from '../affiliates/affiliates.component';
 
 
 @NgModule({
@@ -33,17 +37,18 @@ import { NavBreadcrumbsComponent } from './nav-breadcrumbs/nav-breadcrumbs.compo
   declarations: [
     NotFoundComponent,
     LoginComponent,
-    FooterComponent,
-    HeaderComponent,
+    AffiliatesComponent,
+    StatementComponent,
     DashboardComponent,
     ProfileComponent,
-    AffiliatesComponent,
     TurnoverComponent,
+    ListComponent,
+    PromoComponent,
+    HeaderComponent,
+    NavBreadcrumbsComponent,
+    FooterComponent,
     AsideLeftComponent,
-    NavBreadcrumbsComponent
-],
-  exports: [
-    RouterModule
-  ]
+  ],
+  exports: [RouterModule]
 })
 export class CoreModule { }
