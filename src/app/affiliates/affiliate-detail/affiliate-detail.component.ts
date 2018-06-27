@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AffiliateDetailService } from './affiliate-detail.service';
+import { Chart } from './chart';
 
 @Component({
   selector: 'app-affiliate-detail',
@@ -35,6 +36,12 @@ export class AffiliateDetailComponent implements OnInit {
     });
   }
 
+  createChart(): void {
+    const element = document.getElementsByClassName('profit-chart')[0];
+    const chart = new Chart(element);
+    chart.renderChart(this.chart);
+  }
+
   getCampaigns(): void {
     this.affiliateDetailService.getCampaigns()
       .subscribe(res =>
@@ -55,6 +62,8 @@ export class AffiliateDetailComponent implements OnInit {
       .subscribe(res =>
         this.chart = res.data
       );
+
+    this.createChart();
   }
 
 }
