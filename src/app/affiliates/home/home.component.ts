@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { HomeService } from './home.service';
-import { resolve } from 'url';
 
 @Component({
   selector: 'app-home',

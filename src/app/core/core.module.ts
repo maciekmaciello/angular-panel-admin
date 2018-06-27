@@ -29,6 +29,7 @@ import { HomeComponent } from '../affiliates/home/home.component';
 import { PackagesComponent } from '../affiliates/packages/packages.component';
 import { VerifiedComponent } from '../affiliates/verified/verified.component';
 import { WithdrawnComponent } from '../affiliates/withdrawn/withdrawn.component';
+import { AffiliateDetailComponent } from '../affiliates/affiliate-detail/affiliate-detail.component';
 
 
 @NgModule({
@@ -56,6 +57,7 @@ import { WithdrawnComponent } from '../affiliates/withdrawn/withdrawn.component'
     ProfileComponent,
     MaterialsComponent,
     TurnoverComponent,
+    AffiliateDetailComponent,
     ListComponent,
     PromoComponent,
     HeaderComponent,

@@ -1,0 +1,59 @@
+<app-header></app-header>
+<div class="content-wrapper affiliate-view">
+  <app-nav-breadcrumbs [title]="title"></app-nav-breadcrumbs>
+  <div class="grid-container margin-top-1">
+    <div class="grid-x">
+      <div class="cell small-12">
+        <div class="padding-horizontal-1">
+          <div class="grid-x">
+            <div class="cell small-12 medium-6 large-3">
+              <div class="stat">
+                <div class="icon">
+                  <i class="far fa-hand-point-up"></i>
+                </div>
+                <div class="content">
+                  <div class="name">UNIQUE CLICKS</div>
+                  <div class="value">{{ statistics['clicks'] | number }}</div>
+                </div>
+              </div>
+            </div>
+            <div class="cell small-12 medium-6 large-3">
+              <div class="stat">
+                <div class="icon">
+                  <i class="fas fa-user-shield"></i>
+                </div>
+                <div class="content">
+                  <div class="name">LEADS</div>
+                  <div class="value">{{ statistics['leads'] | number}}</div>
+                </div>
+              </div>
+            </div>
+            <div class="cell small-12 medium-6 large-3">
+              <div class="stat">
+                <div class="icon">
+                  <i class="far fa-calendar-alt"></i>
+                </div>
+                <div class="content">
+                  <div class="name">MONTHLY PROFIT</div>
+                  <div class="value">{{ profit['monthly'] | currency }}</div>
+                </div>
+              </div>
+            </div>
+            <div class="cell small-12 medium-6 large-3">
+              <div class="stat">
+                <div class="icon">
+                  <i class="far fa-money-bill-alt"></i>
+                </div>
+                <div class="content">
+                  <div class="name">AFFILIATE TOTAL PROFIT</div>
+                  <div class="value">{{ profit['total'] | currency }}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

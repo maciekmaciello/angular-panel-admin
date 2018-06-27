@@ -14,6 +14,7 @@ import { HomeComponent } from '../affiliates/home/home.component';
 import { PackagesComponent } from '../affiliates/packages/packages.component';
 import { WithdrawnComponent } from '../affiliates/withdrawn/withdrawn.component';
 import { VerifiedComponent } from '../affiliates/verified/verified.component';
+import { AffiliateDetailComponent } from '../affiliates/affiliate-detail/affiliate-detail.component';
 
 const routes: Routes = [
   {
@@ -54,6 +55,10 @@ const routes: Routes = [
         component: VerifiedComponent
       }
     ]
+  },
+  {
+    path: 'affiliates/view/:id',
+    component: AffiliateDetailComponent
   },
   {
     path: 'turnover',
