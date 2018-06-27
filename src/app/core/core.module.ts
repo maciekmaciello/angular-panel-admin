@@ -30,7 +30,7 @@ import { PackagesComponent } from '../affiliates/packages/packages.component';
 import { VerifiedComponent } from '../affiliates/verified/verified.component';
 import { WithdrawnComponent } from '../affiliates/withdrawn/withdrawn.component';
 import { AffiliateDetailComponent } from '../affiliates/affiliate-detail/affiliate-detail.component';
-
+import { ChartComponent } from './chart/chart.component';
 
 @NgModule({
   imports: [
@@ -64,6 +64,7 @@ import { AffiliateDetailComponent } from '../affiliates/affiliate-detail/affilia
     NavBreadcrumbsComponent,
     FooterComponent,
     AsideLeftComponent,
+    ChartComponent
   ],
   exports: [RouterModule]
 })

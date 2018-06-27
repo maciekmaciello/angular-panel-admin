@@ -1,6 +1,3 @@
-import { TuiChartService } from '../../services/tui-chart.service';
-
-
 const sTuiChart = Symbol('tuiChart');
 const sChartElem = Symbol('chartElem');
 const sChartSettings = Symbol('chartSettings');
@@ -10,16 +7,13 @@ const sSetSeries = Symbol('setSeries');
 export class Chart {
   month: string[];
 
-  constructor(elem) {
-    this[sTuiChart] = new TuiChartService();
-    this[sChartElem] = elem;
+  constructor() {
     this.month = ['January', 'February', 'March', 'April', 'May', 'June',
       'July', 'August', 'September', 'October', 'November', 'December'];
     this[sChartSettings] = {
       options: {
         theme: 'newTheme',
         chart: {
-          width: this[sChartElem].offsetWidth - 50,
           height: 200,
           format: '0.00'
         },
@@ -102,7 +96,11 @@ export class Chart {
         series: this[sSetSeries](res),
       };
 
-      this[sTuiChart].columnChart(this[sChartElem], this[sChartSettings], data);
+      return {
+        chartSettings: this[sChartSettings],
+        data
+      };
+
     }
   }
 

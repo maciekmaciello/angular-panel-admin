@@ -15,12 +15,15 @@ export class AffiliateDetailComponent implements OnInit {
   profit: any;
   statistics: any;
   chart: any;
+  chartRender: any;
+  typeChart: string;
 
   constructor(
     private route: ActivatedRoute,
     private affiliateDetailService: AffiliateDetailService
   ) {
     this.title = 'Affiliates Detail';
+    this.typeChart = 'column';
   }
 
   ngOnInit() {
@@ -37,9 +40,8 @@ export class AffiliateDetailComponent implements OnInit {
   }
 
   createChart(): void {
-    const element = document.getElementsByClassName('profit-chart')[0];
-    const chart = new Chart(element);
-    chart.renderChart(this.chart);
+    const chart = new Chart();
+    this.chartRender = chart.renderChart(this.chart);
   }
 
   getCampaigns(): void {
