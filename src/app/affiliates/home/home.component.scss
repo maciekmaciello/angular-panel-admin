@@ -1,0 +1,70 @@
+.affiliates-list {
+  .item {
+    border: 1px solid transparent;
+    border-left: 4px solid #cec8c8;
+    border-bottom: 1px solid #cec8c8;
+    color: black;
+    cursor: pointer;
+    background: white;
+    display: block;
+    font-size: 12px;
+    padding: 7px 2px;
+    position: relative;
+
+    .email-aff {
+      .text-truncate {
+        text-align: center;
+        width: 200px;
+      }
+
+      .mbri-protect {
+        color: #21ba45;
+        font-size: 23px;
+        left: 26px;
+        opacity: .4;
+        position: absolute;
+        top: 16px;
+      }
+    }
+
+    &:hover {
+      background: #f3f3f3;
+    }
+
+    .list-elem {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+
+      .font-small {
+        color: #3b4956;
+        font-size: 10px;
+      }
+
+      .name-campaigns {
+        font-weight: bold;
+      }
+
+      .status-campaigns {
+        &.active {
+          color:green;
+        }
+
+        &.coming {
+          color: blue;
+        }
+      }
+
+      .progress {
+        margin: 0;
+        width: 75%;
+      }
+
+      .sub-p {
+        font-size: 9px;
+        text-align: center;
+      }
+
+    }
+  }
+}
