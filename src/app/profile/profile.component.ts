@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatPaginator, MatTableDataSource } from '@angular/material';
+
+import { ProfileService } from './profile.service';
 
 @Component({
   selector: 'app-profile',
@@ -7,12 +10,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
   title: string;
-  constructor() {
-    this.title = 'Users';
+  accounts: any;
+
+  displayedColumns: string[] = [
+    'Email', 'Role', 'Affiliate', 'Created At', 'Active', 'IP Login',
+    'Last Activity', 'Starter', '$', '€', 'Actions'
+  ];
+  dataSource: any;
+
+  @ViewChild(MatPaginator)
+  paginator: MatPaginator;
+
+  constructor(private profileService: ProfileService) {
   }
 
   ngOnInit() {
-    console.log('zaq');
+    this.title = 'Users';
+    this.getUsers();
+    this.dataSource = new MatTableDataSource<any>(this.accounts);
+    this.dataSource.paginator = this.paginator;
+  }
+
+  getUsers(): void {
+    this.profileService.getUsers()
+      .subscribe(res => this.accounts = res.data.accounts);
   }
 
 }

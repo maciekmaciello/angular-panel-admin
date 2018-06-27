@@ -10,11 +10,12 @@ import { DashboardService } from './dashboard.service';
 export class DashboardComponent implements OnInit {
   title: string;
   total: object;
+
   constructor(private dashboardService: DashboardService) {
-    this.title = 'Dashboard';
   }
 
   ngOnInit() {
+    this.title = 'Dashboard';
     this.getTotal();
   }
 

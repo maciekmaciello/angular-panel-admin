@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
+  emailLogin: string;
   menu: { name: string, link: string }[];
 
   constructor() {
+  }
+
+  ngOnInit() {
+    this.emailLogin = 'admin@test.com';
     this.menu = [
       { name: 'Users', link: '/users' },
       { name: 'Affiliates', link: '/affiliates' },
@@ -18,10 +22,6 @@ export class HeaderComponent implements OnInit {
       { name: 'Statement', link: '/statement' },
       { name: 'Promo', link: '/promo' },
     ];
-  }
-
-  ngOnInit() {
-
 
 
   }
