@@ -32,7 +32,7 @@ export class ChartComponent implements OnInit {
   }
 
   columnChart({ chartSettings, data }) {
-    chartSettings.options.chart.width = this.elem.offsetWidth - 50,
+    chartSettings.options.chart.width = this.elem.offsetWidth,
       chart.registerTheme('newTheme', chartSettings.theme);
     chart.columnChart(this.elem, data, chartSettings.options);
   }

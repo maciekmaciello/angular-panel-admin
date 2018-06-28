@@ -17,6 +17,8 @@ export class AffiliateDetailComponent implements OnInit {
   chart: any;
   chartRender: any;
   typeChart: string;
+  displayedColumns: string[] = ['Campaign Name', 'Created At', 'Unique Clicks',
+    'Leads', 'Package Used', 'Campaign Type', 'Your Profit'];
 
   constructor(
     private route: ActivatedRoute,

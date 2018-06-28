@@ -55,9 +55,56 @@
       </div>
     </div>
     <div class="grid-x">
-      <div class="cell">
-        chart
+      <div class="cell padding-1">
         <app-chart [type]="typeChart" [dataChart]="chartRender"></app-chart>
+      </div>
+    </div>
+    <div class="grid-x">
+      <div class="cell padding-1">
+        <table *ngIf="campaigns.length > 0" mat-table [dataSource]="campaigns" class="mat-elevation-z8">
+
+          <ng-container matColumnDef="Campaign Name">
+            <th mat-header-cell *matHeaderCellDef> Campaign Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="Created At">
+            <th mat-header-cell *matHeaderCellDef> Created At </th>
+            <td mat-cell *matCellDef="let element"> {{element.createdAt | date}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="Unique Clicks">
+            <th mat-header-cell *matHeaderCellDef> Unique Clicks </th>
+            <td mat-cell *matCellDef="let element"> {{element.clicks | number }} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="Leads">
+            <th mat-header-cell *matHeaderCellDef> Leads </th>
+            <td mat-cell *matCellDef="let element"> {{element.leads | number}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="Package Used">
+            <th mat-header-cell *matHeaderCellDef> Package Used </th>
+            <td mat-cell *matCellDef="let element"> {{element.packageName}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="Campaign Type">
+            <th mat-header-cell *matHeaderCellDef> Campaign Type </th>
+            <td mat-cell *matCellDef="let element"> {{element.packageType}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="Your Profit">
+            <th mat-header-cell *matHeaderCellDef> Your Profit </th>
+            <td mat-cell *matCellDef="let element"> {{element.earn | currency}} </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+        <span class="text-center" *ngIf="campaigns.length === 0">
+          <p>Campaigns is already empty.</p>
+        </span>
       </div>
     </div>
   </div>
