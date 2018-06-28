@@ -24,6 +24,7 @@ body {
 
   table {
     box-shadow: none;
+    font-size: 12px;
 
     tbody {
       background-color: #f4f7f6;
@@ -31,6 +32,10 @@ body {
 
       tr {
         cursor: pointer;
+
+        td {
+          text-align: center;
+        }
 
         &:hover {
           background: #d1ecfb;
@@ -41,7 +46,12 @@ body {
 
     thead {
       background: #fff;
-      color: #0a0a0a;
+
+      th  {
+        color: #3b4956;
+        font-weight: 700;
+        text-align: center;
+      }
     }
   }
 
