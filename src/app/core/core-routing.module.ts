@@ -18,6 +18,7 @@ import { AffiliateDetailComponent } from '../affiliates/affiliate-detail/affilia
 import { GeneralComponent } from '../turnover/general/general.component';
 import { CountryComponent } from '../turnover/country/country.component';
 import { LastTransactionsComponent } from '../turnover/last-transactions/last-transactions.component';
+import { ManageComponent } from '../affiliates/materials/manage/manage.component';
 
 const routes: Routes = [
   {
@@ -62,6 +63,10 @@ const routes: Routes = [
   {
     path: 'affiliates/view/:id',
     component: AffiliateDetailComponent
+  },
+  {
+    path: 'affiliates/materials/manage',
+    component: ManageComponent
   },
   {
     path: 'turnover',

@@ -2,6 +2,7 @@
   <a class="item" *ngFor="let aff of affiliates" [routerLink]="['/affiliates/view/', aff.id]" >
     <div class="grid-x">
       <div class="cell small-12 medium-3 large-3 list-elem">
+        <i *ngIf="aff.valid === 'validated'" class="fas fa-shield-alt verified"></i>
         <div class="email-aff">
           <p class="margin-0 text-truncate">{{aff.email}}</p>
           <p class="margin-0 sub-p">Email</p>
@@ -9,8 +10,8 @@
       </div>
       <div class="cell small-12 medium-2 large-2 list-elem">
         <div class="leads-aff">
-          <span class="mbri-smile-face"></span>
-          <span>{{aff.leads}}</span>
+          <i class="far fa-smile"></i>
+          <span> {{aff.leads}}</span>
           <p class="margin-0 sub-p">Leads</p>
         </div>
       </div>
@@ -38,8 +39,8 @@
       </div>
       <div class="cell small-12 medium-2 large-2 list-elem">
         <div class="campaings-aff text-center">
-          <span class="mbri-cursor-click"></span>
-          <span>{{aff.totalActiveCampaings}}</span>
+          <i class="far fa-check-circle"></i>
+          <span> {{aff.totalActiveCampaings}}</span>
           <p class="margin-0 sub-p">Active Campaings</p>
         </div>
       </div>

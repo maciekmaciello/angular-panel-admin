@@ -11,19 +11,20 @@
     padding: 7px 2px;
     position: relative;
 
+    .verified {
+      color: #21ba45;
+      font-size: 23px;
+      left: 9px;
+      opacity: 0.2;
+      position: absolute;
+      display: flex;
+      align-items: center;
+    }
+
     .email-aff {
       .text-truncate {
         text-align: center;
         width: 200px;
-      }
-
-      .mbri-protect {
-        color: #21ba45;
-        font-size: 23px;
-        left: 26px;
-        opacity: .4;
-        position: absolute;
-        top: 16px;
       }
     }
 

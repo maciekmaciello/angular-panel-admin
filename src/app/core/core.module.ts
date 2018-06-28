@@ -31,7 +31,7 @@ import { VerifiedComponent } from '../affiliates/verified/verified.component';
 import { WithdrawnComponent } from '../affiliates/withdrawn/withdrawn.component';
 import { AffiliateDetailComponent } from '../affiliates/affiliate-detail/affiliate-detail.component';
 import { ChartComponent } from './chart/chart.component';
-
+import { ManageComponent } from '../affiliates/materials/manage/manage.component';
 import { GeneralComponent } from '../turnover/general/general.component';
 import { CountryComponent } from '../turnover/country/country.component';
 import { LastTransactionsComponent } from '../turnover/last-transactions/last-transactions.component';
@@ -74,7 +74,8 @@ import { GeneralService } from '../turnover/general/general.service';
     ChartComponent,
     GeneralComponent,
     CountryComponent,
-    LastTransactionsComponent
+    LastTransactionsComponent,
+    ManageComponent
   ],
   providers: [GeneralService],
   exports: [RouterModule]
