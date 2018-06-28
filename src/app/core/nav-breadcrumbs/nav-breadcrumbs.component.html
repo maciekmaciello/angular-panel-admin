@@ -9,10 +9,11 @@
     <div class="cell medium-6 flex align-middle text-right">
       <nav role="navigation">
         <ul class="breadcrumbs margin-0">
-          <li><a [routerLink]="['/dashboard']">
+          <li>
+            <a [routerLink]="['/dashboard']">
             <i class="fas fa-home"></i> Home</a></li>
-           <li *ngFor="let item of crumbsArray" [routerLink]="['/item']">
-            <span>{{ item }}</span>
+           <li *ngFor="let item of crumbsArray">
+            <a [routerLink]="[item.path]"> <span>{{ item.name }}</span></a>
           </li>
         </ul>
       </nav>

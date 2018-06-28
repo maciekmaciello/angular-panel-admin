@@ -8,7 +8,8 @@ import { Router } from '@angular/router';
 })
 export class NavBreadcrumbsComponent implements OnInit {
 
-  crumbsArray: string[] = [];
+  crumbsArray: Array<{ name: string, path: string }> = [];
+  path: string;
 
   @Input()
   title: string;
@@ -20,12 +21,23 @@ export class NavBreadcrumbsComponent implements OnInit {
   ngOnInit() {
   }
 
+  createPath(elem: string) {
+    if (this.path) {
+      return this.path = `${this.path}/${elem}`;
+    }
+    this.path = `/${elem}`;
+    return `/${elem}`;
+  }
+
   pushToBredArray(array: string[]) {
     array.forEach(elem => {
       if (elem.length > 0) {
-        this.crumbsArray.push(elem);
+        const path = this.createPath(elem);
+        console.log(path);
+        this.crumbsArray.push({ name: elem, path });
       }
     });
+    console.log(this.crumbsArray)
   }
 
   setBreadcrumbs() {
