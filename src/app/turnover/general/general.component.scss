@@ -1,0 +1,30 @@
+.turnover-statistics {
+  .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: left;
+    min-height: 150px;
+
+    p:first-of-type {
+      color: #5d5d5d;
+      font-size: 12px;
+      font-weight: 100;
+      transition: .3s;
+      transform: translateY(15px);
+      border-bottom: 1px dotted #cec8c8;
+      max-width: 70%;
+    }
+
+    &:hover p:first-of-type {
+      transform: translateY(0);
+    }
+
+    p {
+      color: #1793d1;
+      font-size: 22px;
+      font-weight: 700;
+    }
+  }
+}

@@ -32,6 +32,13 @@ import { WithdrawnComponent } from '../affiliates/withdrawn/withdrawn.component'
 import { AffiliateDetailComponent } from '../affiliates/affiliate-detail/affiliate-detail.component';
 import { ChartComponent } from './chart/chart.component';
 
+import { GeneralComponent } from '../turnover/general/general.component';
+import { CountryComponent } from '../turnover/country/country.component';
+import { LastTransactionsComponent } from '../turnover/last-transactions/last-transactions.component';
+
+import { GeneralService } from '../turnover/general/general.service';
+
+
 @NgModule({
   imports: [
     CommonModule,
@@ -64,8 +71,12 @@ import { ChartComponent } from './chart/chart.component';
     NavBreadcrumbsComponent,
     FooterComponent,
     AsideLeftComponent,
-    ChartComponent
+    ChartComponent,
+    GeneralComponent,
+    CountryComponent,
+    LastTransactionsComponent
   ],
+  providers: [GeneralService],
   exports: [RouterModule]
 })
 export class CoreModule { }

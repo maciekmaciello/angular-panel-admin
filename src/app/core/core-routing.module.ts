@@ -15,6 +15,9 @@ import { PackagesComponent } from '../affiliates/packages/packages.component';
 import { WithdrawnComponent } from '../affiliates/withdrawn/withdrawn.component';
 import { VerifiedComponent } from '../affiliates/verified/verified.component';
 import { AffiliateDetailComponent } from '../affiliates/affiliate-detail/affiliate-detail.component';
+import { GeneralComponent } from '../turnover/general/general.component';
+import { CountryComponent } from '../turnover/country/country.component';
+import { LastTransactionsComponent } from '../turnover/last-transactions/last-transactions.component';
 
 const routes: Routes = [
   {
@@ -62,7 +65,21 @@ const routes: Routes = [
   },
   {
     path: 'turnover',
-    component: TurnoverComponent
+    component: TurnoverComponent,
+    children: [
+      {
+        path: '',
+        component: GeneralComponent
+      },
+      {
+        path: 'country',
+        component: CountryComponent
+      },
+      {
+        path: 'transactions',
+        component: LastTransactionsComponent
+      },
+    ]
   },
   {
     path: 'list',

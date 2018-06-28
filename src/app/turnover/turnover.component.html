@@ -1,9 +1,17 @@
 <app-header></app-header>
-<div class="content-wrapper profile">
+<div class="content-wrapper affiliates">
   <app-nav-breadcrumbs [title]="title"></app-nav-breadcrumbs>
   <div class="grid-container margin-top-1">
-    ss
+    <div class="grid-x">
+      <div class="cell small-12 medium-3 large-3 xlarge-2">
+        <app-aside-left [menu]="menuTurnover"></app-aside-left>
+      </div>
+      <div class="cell small-12 medium-9 large-9 xlarge-10">
+        <div class="padding-horizontal-1">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-
 <app-footer></app-footer>
