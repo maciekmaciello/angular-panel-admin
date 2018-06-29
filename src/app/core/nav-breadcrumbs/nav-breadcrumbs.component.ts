@@ -33,11 +33,9 @@ export class NavBreadcrumbsComponent implements OnInit {
     array.forEach(elem => {
       if (elem.length > 0) {
         const path = this.createPath(elem);
-        console.log(path);
         this.crumbsArray.push({ name: elem, path });
       }
     });
-    console.log(this.crumbsArray)
   }
 
   setBreadcrumbs() {
