@@ -5,12 +5,15 @@
 
     li {
       padding-right: 30px;
+      min-height: 50px;
 
       a {
         align-items: center;
         color: #5d5d5d;
         padding: .4rem 0;
         border-bottom: 1px dotted transparent;
+        padding-bottom: 15px;
+        transition: .3s;
 
         &.active {
           color: #1793d1;

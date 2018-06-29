@@ -1,9 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import chart from 'tui-chart';
 import map from 'tui-chart/maps/world';
-console.log(map);
-
-
 
 @Component({
   selector: 'app-chart',
@@ -45,9 +42,11 @@ export class ChartComponent implements OnInit {
   }
 
   mapChart({ chartSettings, data }) {
-    chartSettings.options.chart.width = this.elem.offsetWidth,
-      chart.registerTheme('newTheme', chartSettings.theme);
-    chart.mapChart(this.elem, data, chartSettings.options);
+    if (map) {
+      chartSettings.options.chart.width = this.elem.offsetWidth,
+        chart.registerTheme('newTheme', chartSettings.theme);
+      chart.mapChart(this.elem, data, chartSettings.options);
+    }
   }
 
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Chart } from './chart';
 
 @Component({
@@ -22,5 +22,4 @@ export class CountryComponent implements OnInit {
     const chart = new Chart();
     this.chartRender = chart.renderChart();
   }
-
 }

@@ -17,7 +17,9 @@ export class Chart {
           height: 600,
           title: 'Country',
           format: '0.00',
-          suffix: '$'
+        },
+        tooltip: {
+          suffix: '&#36;'
         },
         map: 'world',
         legend: {
@@ -26,7 +28,7 @@ export class Chart {
       },
       theme: {
         series: {
-          startColor: '#ffefef',
+          startColor: '#81c4e6',
           endColor: '#1793d1',
           overColor: '#1793d1'
         }
