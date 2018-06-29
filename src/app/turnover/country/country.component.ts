@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Chart } from './chart';
 
 @Component({
   selector: 'app-country',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./country.component.css']
 })
 export class CountryComponent implements OnInit {
+  chart: any;
+  chartRender: any;
+  typeChart: String = 'map';
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
+    this.createChart();
+  }
+
+  createChart(): void {
+    const chart = new Chart();
+    this.chartRender = chart.renderChart();
   }
 
 }

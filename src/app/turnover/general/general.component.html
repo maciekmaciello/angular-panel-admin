@@ -1,28 +1,29 @@
 <div class="grid-x turnover-statistics">
-  <div class="cell small-10 medium-10 large-10">
+  <div class="cell small-12 medium-12 large-12">
     <div class="grid-x">
-      <div class="cell small-12 medium-3 large-3 item">
+      <div class="cell small-12 medium-2 large-2 item">
         <p>Day payments</p>
         <p>{{ statistics.dayPayments | currency }}</p>
       </div>
-      <div class="cell small-12 medium-3 large-3 item">
+      <div class="cell small-12 medium-2 large-2 item">
         <p>Month payments</p>
         <p>{{ statistics.weekPayments | currency }}</p>
       </div>
-      <div class="cell small-12 medium-3 large-3 item">
+      <div class="cell small-12 medium-2 large-2 item">
         <p>Week payments</p>
         <p>{{ statistics.monthPayments | currency }}</p>
       </div>
-      <div class="cell small-12 medium-3 large-3 item">
+      <div class="cell small-12 medium-2 large-2 item">
         <p>Year payments</p>
         <p>{{ statistics.yearPayments | currency }}</p>
       </div>
+      <div class="cell small-2 medium-2 large-2 large-offset-2 item">
+        <p>All payments</p>
+        <p>{{ statistics.allPayments | currency }}</p>
+      </div>
     </div>
   </div>
-  <div class="cell small-2 medium-2 large-2 item">
-    <p>All payments</p>
-     <p>{{ statistics.allPayments | currency }}</p>
-  </div>
+
 </div>
 
 

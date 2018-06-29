@@ -16,7 +16,6 @@ export class AffiliatesComponent implements OnInit {
       { name: 'Packages', icon: 'fas fa-box fa-sm', url: 'packages/' },
       { name: 'Withdrawn', icon: 'far fa-money-bill-alt fa-sm', url: 'withdrawn/' },
       { name: 'Affiliates to be verified', icon: 'fas fa-poo fa-sm', url: 'verified/' },
-
     ];
   }
 

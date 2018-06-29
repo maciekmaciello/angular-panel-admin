@@ -37,6 +37,7 @@ import { CountryComponent } from '../turnover/country/country.component';
 import { LastTransactionsComponent } from '../turnover/last-transactions/last-transactions.component';
 
 import { GeneralService } from '../turnover/general/general.service';
+import { LastTransactionsService } from '../turnover/last-transactions/last-transactions.service';
 
 
 @NgModule({
@@ -77,7 +78,7 @@ import { GeneralService } from '../turnover/general/general.service';
     LastTransactionsComponent,
     ManageComponent
   ],
-  providers: [GeneralService],
+  providers: [GeneralService, LastTransactionsService],
   exports: [RouterModule]
 })
 export class CoreModule { }
