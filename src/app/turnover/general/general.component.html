@@ -29,7 +29,11 @@
 
 <div class="grid-x">
   <div class="cell small-12 medium-12 large-12">
-    <table *ngIf="ELEMENT_DATA.length > 0" mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <mat-button-toggle-group  #group="matButtonToggleGroup" value="top10">
+      <mat-button-toggle (click)="changeActivateTable('top10')" value="top10">Top 10 Users</mat-button-toggle>
+      <mat-button-toggle (click)="changeActivateTable('affilliateProfit')" value="affiliateProfit">Affiliate Profits</mat-button-toggle>
+    </mat-button-toggle-group>
+    <table [hidden]="activeTable === 'affilliateProfit'" *ngIf="ELEMENT_DATA.length > 0" mat-table [dataSource]="dataSource" class="mat-elevation-z8" >
 
       <ng-container matColumnDef="email">
         <th mat-header-cell *matHeaderCellDef> Email </th>
@@ -56,6 +60,35 @@
     </table>
     <span *ngIf="ELEMENT_DATA.length === 0">
       <p>Top affiliates list is already empty.</p>
+    </span>
+
+    <table [hidden]="activeTable === 'top10'" *ngIf="ELEMENT_PROFIT.length > 0" mat-table [dataSource]="profitSource" class="mat-elevation-z8" >
+
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef> Email </th>
+        <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="dayly">
+        <th mat-header-cell *matHeaderCellDef> Dayly </th>
+        <td mat-cell *matCellDef="let element"> {{element.dayly | currency }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="weekly">
+        <th mat-header-cell *matHeaderCellDef> Weekly </th>
+        <td mat-cell *matCellDef="let element"> {{element.weekly | currency }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="yearly">
+        <th mat-header-cell *matHeaderCellDef> Yearly</th>
+        <td mat-cell *matCellDef="let element"> {{element.yearly | currency }} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedProfitColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedProfitColumns;"></tr>
+    </table>
+    <span *ngIf="ELEMENT_PROFIT.length === 0">
+      <p>Affilaites profit list is already empty.</p>
     </span>
   </div>
 </div>

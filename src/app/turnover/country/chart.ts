@@ -17,6 +17,7 @@ export class Chart {
           height: 600,
           title: 'Country',
           format: '0.00',
+          background: 'yellow'
         },
         tooltip: {
           suffix: '&#36;'

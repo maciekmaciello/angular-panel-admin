@@ -17,10 +17,4 @@ export class TurnoverComponent implements OnInit {
 
   ngOnInit() {
   }
-
-
-  displayCounter(count) {
-    console.log(count);
-  }
-
 }

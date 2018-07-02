@@ -8,6 +8,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+
 
 import { NotFoundComponent } from './not-found/not-found.component';
 import { LoginComponent } from './login/login.component';
@@ -50,7 +52,8 @@ import { LastTransactionsService } from '../turnover/last-transactions/last-tran
     FormsModule,
     ReactiveFormsModule,
     MatPaginatorModule,
-    MatTableModule
+    MatTableModule,
+    MatButtonToggleModule
   ],
   declarations: [
     NotFoundComponent,
