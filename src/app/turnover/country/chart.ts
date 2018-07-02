@@ -17,7 +17,6 @@ export class Chart {
           height: 600,
           title: 'Country',
           format: '0.00',
-          background: 'yellow'
         },
         tooltip: {
           suffix: '&#36;'
@@ -32,6 +31,11 @@ export class Chart {
           startColor: '#81c4e6',
           endColor: '#1793d1',
           overColor: '#1793d1'
+        },
+        chart: {
+          background: {
+            color: '#F4F7F6'
+          }
         }
       }
     };
