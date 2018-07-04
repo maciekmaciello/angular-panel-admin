@@ -24,6 +24,7 @@
     "@angular/router": "^6.0.5",
     "@fortawesome/fontawesome-free-webfonts": "^1.0.9",
     "core-js": "^2.5.4",
+    "flag-icon-css": "^3.0.0",
     "foundation-sites": "^6.4.4-rc1",
     "material-design-icons": "^3.0.1",
     "rxjs": "^6.0.0",

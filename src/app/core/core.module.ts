@@ -47,6 +47,7 @@ import { LastTransactionsService } from '../turnover/last-transactions/last-tran
 import { LastListsService } from '../list/last-lists/last-lists.service';
 
 
+
 @NgModule({
   imports: [
     CommonModule,

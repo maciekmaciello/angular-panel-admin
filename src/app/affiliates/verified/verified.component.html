@@ -1,3 +1,35 @@
-<p>
-  verified works!
-</p>
+<div class="verified-list">
+  <a class="item" *ngFor="let aff of affiliates" [routerLink]="['/affiliates/verified/view', aff.id]" >
+    <div class="grid-x">
+      <div class="cell small-12 medium-3 large-3 list-elem">
+        <div class="email-aff">
+          <p class="margin-0 text-truncate">{{aff.email}}</p>
+          <p class="margin-0 sub-p">Email</p>
+        </div>
+      </div>
+      <div class="cell small-12 medium-3 large-3 list-elem">
+        <div class="first-name-aff">
+          <i class="far fa-smile"></i>
+          <span> {{aff.firstName}}</span>
+          <p class="margin-0 sub-p">First Name</p>
+        </div>
+      </div>
+      <div class="cell small-12 medium-3 large-3 list-elem">
+        <div class="last-name-aff text-center">
+          <span>
+            {{aff.lastName}}
+          </span>
+          <p class="margin-0 sub-p">Last Name</p>
+        </div>
+      </div>
+      <div class="cell small-12 medium-3 large-3 list-elem">
+        <div class="country-aff text-center">
+          <span>
+            {{aff.country}}
+          </span>
+          <p class="margin-0 sub-p">Country</p>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
