@@ -6,9 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit {
-  title: string;
+  title: String = 'List Mode';
+  menuLists: any[] = [
+    { name: 'Last lists', icon: 'fas fa-envelope  fa-sm', url: '/list' },
+    { name: 'Current lists', icon: 'fas fa-envelope-open fa-sm', url: 'current/' }
+  ];
+
   constructor() {
-    this.title = 'List Mode';
   }
 
   ngOnInit() {

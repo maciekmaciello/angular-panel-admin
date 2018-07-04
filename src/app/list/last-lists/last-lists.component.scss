@@ -1,0 +1,44 @@
+mat-expansion-panel-header {
+  display: flex;
+  padding: 10px;
+
+  mat-panel-title {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    span {
+      font-size: 12px;
+      opacity: .7;
+    }
+  }
+
+  mat-panel-description {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    span {
+      font-size: 12px;
+      opacity: .7;
+    }
+  }
+}
+
+.detailed {
+  width: 100%;
+  min-height: 100px;
+  display: flex;
+
+  span {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    color: rgba(0,0,0,.54);
+  }
+
+}

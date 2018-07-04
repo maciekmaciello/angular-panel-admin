@@ -34,7 +34,7 @@ export class Chart {
         },
         chart: {
           background: {
-            color: '#F4F7F6'
+            color: '#ffffff82'
           }
         }
       }
@@ -50,7 +50,19 @@ export class Chart {
         },
         {
           code: 'AF',
-          data: 48.44454554
+          data: 48
+        },
+        {
+          code: 'BE',
+          data: 10
+        },
+        {
+          code: 'GB',
+          data: 61
+        },
+        {
+          code: 'DE',
+          data: 33
         }
       ]
     };

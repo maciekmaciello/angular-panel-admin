@@ -1,11 +1,14 @@
 <app-header></app-header>
-<div class="content-wrapper list">
+<div class="content-wrapper list-mode">
   <app-nav-breadcrumbs [title]="title"></app-nav-breadcrumbs>
   <div class="grid-container margin-top-1">
     <div class="grid-x">
-      <div class="cell small-12">
+      <div class="cell small-12 medium-3 large-3 xlarge-2">
+        <app-aside-left [menu]="menuLists"></app-aside-left>
+      </div>
+      <div class="cell small-12 medium-9 large-9 xlarge-10">
         <div class="padding-horizontal-1">
-         list
+          <router-outlet></router-outlet>
         </div>
       </div>
     </div>

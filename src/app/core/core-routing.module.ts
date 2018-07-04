@@ -17,8 +17,11 @@ import { VerifiedComponent } from '../affiliates/verified/verified.component';
 import { AffiliateDetailComponent } from '../affiliates/affiliate-detail/affiliate-detail.component';
 import { GeneralComponent } from '../turnover/general/general.component';
 import { CountryComponent } from '../turnover/country/country.component';
+import { ProfitAffiliateComponent } from '../turnover/profit-affiliate/profit-affiliate.component';
 import { LastTransactionsComponent } from '../turnover/last-transactions/last-transactions.component';
 import { ManageComponent } from '../affiliates/materials/manage/manage.component';
+import { LastListsComponent } from '../list/last-lists/last-lists.component';
+import { CurrentListsComponent } from '../list/current-lists/current-lists.component';
 
 const routes: Routes = [
   {
@@ -84,11 +87,26 @@ const routes: Routes = [
         path: 'transactions',
         component: LastTransactionsComponent
       },
+      {
+        path: 'profit-affilaite',
+        component: ProfitAffiliateComponent
+      },
     ]
   },
   {
     path: 'list',
-    component: ListComponent
+    component: ListComponent,
+    children: [
+      {
+        path: '',
+        component: LastListsComponent
+      },
+      {
+        path: 'current',
+        component: CurrentListsComponent
+      },
+
+    ]
   },
   {
     path: 'statement',

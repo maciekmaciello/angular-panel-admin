@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Observable, of, generate } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { AffiliateElement } from './affiliate';
+import { AffiliateProfitElement } from './affiliate-profit';
 import { ELEMENT_DATA } from './mock-general';
 import { ELEMENT_PROFIT } from './mock-general';
 import { GENERAL_STATISTICS } from './mock-general-statistics';
@@ -18,7 +19,7 @@ export class GeneralService {
     return of(GENERAL_STATISTICS);
   }
 
-  getAffiliatesProfit() {
+  getAffiliatesProfit(): Observable<AffiliateProfitElement[]> {
     return of(ELEMENT_PROFIT);
   }
 

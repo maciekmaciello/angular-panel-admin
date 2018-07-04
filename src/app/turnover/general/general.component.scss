@@ -32,3 +32,8 @@
 .mat-button-toggle-group, .mat-button-toggle-standalone {
   box-shadow: none;
 }
+
+.mat-button-toggle-checked {
+    background-color: #ffffff;
+    color: rgba(0,0,0,.54);
+}

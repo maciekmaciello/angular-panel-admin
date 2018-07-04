@@ -9,7 +9,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
-
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatListModule } from '@angular/material/list';
 
 import { NotFoundComponent } from './not-found/not-found.component';
 import { LoginComponent } from './login/login.component';
@@ -35,11 +36,15 @@ import { AffiliateDetailComponent } from '../affiliates/affiliate-detail/affilia
 import { ChartComponent } from './chart/chart.component';
 import { ManageComponent } from '../affiliates/materials/manage/manage.component';
 import { GeneralComponent } from '../turnover/general/general.component';
+import { ProfitAffiliateComponent } from '../turnover/profit-affiliate/profit-affiliate.component';
 import { CountryComponent } from '../turnover/country/country.component';
 import { LastTransactionsComponent } from '../turnover/last-transactions/last-transactions.component';
+import { LastListsComponent } from '../list/last-lists/last-lists.component';
+import { CurrentListsComponent } from '../list/current-lists/current-lists.component';
 
 import { GeneralService } from '../turnover/general/general.service';
 import { LastTransactionsService } from '../turnover/last-transactions/last-transactions.service';
+import { LastListsService } from '../list/last-lists/last-lists.service';
 
 
 @NgModule({
@@ -53,7 +58,9 @@ import { LastTransactionsService } from '../turnover/last-transactions/last-tran
     ReactiveFormsModule,
     MatPaginatorModule,
     MatTableModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatExpansionModule,
+    MatListModule
   ],
   declarations: [
     NotFoundComponent,
@@ -77,11 +84,14 @@ import { LastTransactionsService } from '../turnover/last-transactions/last-tran
     AsideLeftComponent,
     ChartComponent,
     GeneralComponent,
+    ProfitAffiliateComponent,
     CountryComponent,
     LastTransactionsComponent,
-    ManageComponent
+    ManageComponent,
+    LastListsComponent,
+    CurrentListsComponent
   ],
-  providers: [GeneralService, LastTransactionsService],
+  providers: [GeneralService, LastTransactionsService, LastListsService],
   exports: [RouterModule]
 })
 export class CoreModule { }

@@ -1,0 +1,32 @@
+<mat-accordion>
+  <mat-expansion-panel *ngFor="let list of lastLists">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{list?.email}}
+        <span>Email</span>
+      </mat-panel-title>
+      <mat-panel-description>
+       {{list?.amout}}
+        <span>Emails amount</span>
+      </mat-panel-description>
+      <mat-panel-description>
+        {{list?.cleanedAt | date:'shortDate'}}
+        <span>Cleaned at</span>
+      </mat-panel-description>
+      <mat-panel-description>
+        {{list?.listName}}
+        <span>List name</span>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div class="detailed">
+      <span>
+        <p>Duration: {{list?.duration}}</p>
+        <p>List ID: {{list?.listId}}</p>
+      </span>
+      <span>Chart</span>
+      <span>
+        <p>Total: 10/0</p>
+      </span>
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>

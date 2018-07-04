@@ -10,7 +10,8 @@ export class TurnoverComponent implements OnInit {
   menuTurnover: any[] = [
     { name: 'Turnover', icon: 'fas fa-hand-holding-usd  fa-sm', url: '/turnover' },
     { name: 'Country', icon: 'fas fa-globe fa-sm', url: 'country/' },
-    { name: 'Last Transactions', icon: 'fas fa-chart-line fa-sm', url: 'transactions/' }
+    { name: 'Last Transactions', icon: 'fas fa-chart-line fa-sm', url: 'transactions/' },
+    { name: 'Profit', icon: 'far fa-money-bill-alt fa-sm', url: 'profit-affilaite/' }
   ];
   constructor() {
   }
